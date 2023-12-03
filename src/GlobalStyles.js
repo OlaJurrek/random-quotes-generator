@@ -7,10 +7,20 @@ const GlobalStyles = createGlobalStyle`
   * {
     margin: 0;
   }
+  :root {
+    --black: hsl(25, 75%, 9%);
+    --grey: hsla(25, 76%, 10%, 11%);
+    --lightOrange: hsl(26, 66%, 84%);
+    --orange: hsl(25, 74%, 47%);
+    --white: hsl(0, 86%, 38%);
+    --borderRadius: 8px;
+  }
   html, body {
     height: 100%;
   }
   body {
+    font-family: 'Maven Pro Variable', sans-serif;
+    color: var(--black);
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
   }
