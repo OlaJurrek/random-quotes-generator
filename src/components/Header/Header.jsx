@@ -8,9 +8,7 @@ const Header = () => (
 );
 
 const StyledHeader = styled.header`
-    margin: 37px 0 40px;
-    border-top: 10px dotted var(--orange);
-    border-bottom: 10px dotted #000;
+    margin: 6rem 0 2.5rem;
     padding: 10px 0 15px;
 `;
 

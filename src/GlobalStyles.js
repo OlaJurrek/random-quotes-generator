@@ -12,8 +12,10 @@ const GlobalStyles = createGlobalStyle`
     --grey: hsla(25, 76%, 10%, 11%);
     --lightOrange: hsl(26, 66%, 84%);
     --orange: hsl(25, 74%, 47%);
-    --white: hsl(0, 86%, 38%);
+    --red: hsl(0, 86%, 36%);
+    --white: hsl(40, 100%, 99%);
     --borderRadius: 8px;
+    --borderWidth: 3px;
   }
   html, body {
     height: 100%;
