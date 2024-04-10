@@ -20,6 +20,7 @@ const StyledSection = styled.section`
   display: flex;
   justify-content: center;
   gap: 2rem;
+  margin-bottom: 80px;
 `;
 
 export default Actions;

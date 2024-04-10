@@ -1,11 +1,13 @@
 import styled from "styled-components";
 import Header from "./Header";
 import Actions from "./Actions";
+import Quotes from "./Quotes";
 
 const Wrapper = () => (
     <StyledWrapper>
         <Header />
         <Actions />
+        <Quotes />
     </StyledWrapper>
 );
 
