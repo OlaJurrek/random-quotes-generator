@@ -1,10 +1,17 @@
 // import React from "react";
 import styled from "styled-components";
 
-const Button = ({ label, children }) => {
+const Button = ({className, type, children }) => {
+  let btnType;
+  if (type === 'special') {
+    console.log('special button');
+  } else if (type === 'button' || type === 'submit') {
+    btnType = type;
+  } else {
+    throw new Error('Unrecognized button type');
+  }
   return (
-    <StyledButton type="button">
-      <Label>{label}</Label>
+    <StyledButton type={btnType} className={className}>
       {children}
     </StyledButton>
   );
@@ -24,8 +31,5 @@ const StyledButton = styled.button`
   cursor: pointer;
 `;
 
-const Label = styled.span`
-  white-space: nowrap;
-`;
 
 export default Button;

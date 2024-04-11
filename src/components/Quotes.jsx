@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Blockquote from "./BlockQuote";
+import Blockquote from "./Blockquote";
 
 const data = [
   {

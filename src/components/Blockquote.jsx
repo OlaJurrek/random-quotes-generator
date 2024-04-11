@@ -1,10 +1,17 @@
 import styled, { css } from "styled-components";
-import quoteLeftImg from "../../assets/icons/quote-left.svg";
-import quoteRightImg from "../../assets/icons/quote-right.svg";
+import Button from "./Button";
+import CopyIcon from "../assets/icons/CopyIcon";
+import quoteLeftImg from "../assets/icons/quote-left.svg";
+import quoteRightImg from "../assets/icons/quote-right.svg";
+
+
 
 function Blockquote({ author, content }) {
   return (
     <StyledBlockquote>
+      <IconButton type="button">
+        <CopyIcon width=".9em" />
+      </IconButton>
       <p>{content}</p>
       <Circle aria-hidden="true" />
       <StyledFooter>{author}</StyledFooter>
@@ -55,19 +62,25 @@ const StyledBlockquote = styled.blockquote`
 `;
 
 const Circle = styled.div`
-    width: 40px;
-    height: 40px;
-    background-color: var(--red);
-    border-radius: 50%;
-    border: 8px solid var(--orange);
+  width: 40px;
+  height: 40px;
+  background-color: var(--red);
+  border-radius: 50%;
+  border: 8px solid var(--orange);
 `;
 
 const StyledFooter = styled.footer`
-    margin-top: -2px;
-    font-variation-settings: "wght" 480;
-    text-align: center;
+  margin-top: -2px;
+  font-variation-settings: "wght" 480;
+  text-align: center;
 `;
 
-
+const IconButton = styled(Button)`
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 15px;
+  border: none;
+`;
 
 export default Blockquote;

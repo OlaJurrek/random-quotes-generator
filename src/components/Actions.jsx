@@ -1,16 +1,20 @@
-// import React from "react";
 import styled from "styled-components";
 import Button from "./Button";
-import IconWandSparkles from "../../assets/icons/WandSparklesIcon";
-import IconCopy from "../../assets/icons/CopyIcon";
+import texts from "../texts";
+import IconWandSparkles from "../assets/icons/WandSparklesIcon";
+import IconCopy from "../assets/icons/CopyIcon";
 
 const Actions = () => (
   <StyledSection>
-    <Button label="Number of quotes" type="special"></Button>
-    <Button label="Generate quote" type="submit">
+    <Button type="special">
+      <label>{texts.buttons.number}</label>
+    </Button>
+    <Button type="submit">
+      <span>{texts.buttons.generate}</span>
       <IconWandSparkles width=".8em" height=".8em" />
     </Button>
-    <Button label="Copy all quotes" type="button">
+    <Button type="button">
+      <span>{texts.buttons.copyAll}</span>
       <IconCopy width=".9em" />
     </Button>
   </StyledSection>

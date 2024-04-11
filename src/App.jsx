@@ -1,4 +1,4 @@
-import Wrapper from './components/Header/Wrapper';
+import Wrapper from './components/Wrapper';
 import GlobalStyles from './GlobalStyles';
 
 function App() {
