@@ -1,10 +1,12 @@
 import styled, { css } from "styled-components";
+import quoteLeftImg from "../../assets/icons/quote-left.svg";
+import quoteRightImg from "../../assets/icons/quote-right.svg";
 
 function Blockquote({ author, content }) {
   return (
     <StyledBlockquote>
       <p>{content}</p>
-      <Circle />
+      <Circle aria-hidden="true" />
       <StyledFooter>{author}</StyledFooter>
     </StyledBlockquote>
   );
@@ -32,6 +34,7 @@ const StyledBlockquote = styled.blockquote`
   align-items: center;
   gap: 25px;
   max-width: calc(450rem / 16);
+  text-align: center;
   padding: 50px 70px 30px;
   border: var(--borderWidth) solid var(--black);
   border-radius: var(--borderRadius);
@@ -40,14 +43,14 @@ const StyledBlockquote = styled.blockquote`
     ${sharedPseudoElementsStyle}
     top: var(--verticalOffset);
     left: calc(var(--size) / -2);
-    background-image: url("/quote-left.svg?url.");
+    background-image: url(${quoteLeftImg});
   }
 
   &::after {
     ${sharedPseudoElementsStyle}
     bottom: var(--verticalOffset);
     right: calc(var(--size) / -2);
-    background-image: url("/quote-right.svg?url.");
+    background-image: url(${quoteRightImg});
   }
 `;
 

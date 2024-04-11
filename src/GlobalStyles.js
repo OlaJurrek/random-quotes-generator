@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
 *, *::before, *::after {
@@ -25,6 +25,7 @@ const GlobalStyles = createGlobalStyle`
     color: var(--black);
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
+    background-color: var(--white);
   }
   img, picture, video, canvas, svg {
     display: block;
