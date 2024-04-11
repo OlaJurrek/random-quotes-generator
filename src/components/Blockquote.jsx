@@ -1,16 +1,17 @@
 import styled, { css } from "styled-components";
 import Button from "./Button";
+import VisuallyHidden from "./VisuallyHidden";
+import texts from "../texts";
 import CopyIcon from "../assets/icons/CopyIcon";
 import quoteLeftImg from "../assets/icons/quote-left.svg";
 import quoteRightImg from "../assets/icons/quote-right.svg";
-
-
 
 function Blockquote({ author, content }) {
   return (
     <StyledBlockquote>
       <IconButton type="button">
-        <CopyIcon width=".9em" />
+        <CopyIcon width=".9em" aria-hidden="true" />
+        <VisuallyHidden>{texts.buttons.copy}</VisuallyHidden>
       </IconButton>
       <p>{content}</p>
       <Circle aria-hidden="true" />

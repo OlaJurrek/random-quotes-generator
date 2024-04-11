@@ -11,11 +11,11 @@ const Actions = () => (
     </Button>
     <Button type="submit">
       <span>{texts.buttons.generate}</span>
-      <IconWandSparkles width=".8em" height=".8em" />
+      <IconWandSparkles width=".8em" height=".8em" aria-hidden="true"/>
     </Button>
     <Button type="button">
       <span>{texts.buttons.copyAll}</span>
-      <IconCopy width=".9em" />
+      <IconCopy width=".9em" aria-hidden="true" />
     </Button>
   </StyledSection>
 );

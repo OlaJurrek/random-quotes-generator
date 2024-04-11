@@ -1,8 +1,9 @@
 export default {
   header: "Random qoutes generator",
   buttons: {
-    generate: "Generate quote",
     copyAll: "Copy all quotes",
+    copy: "Copy quote",
+    generate: "Generate quote",
     number: "Number of quotes",
   },
 };
