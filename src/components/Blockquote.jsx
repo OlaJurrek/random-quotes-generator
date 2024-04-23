@@ -5,11 +5,17 @@ import texts from "../texts";
 import CopyIcon from "../assets/icons/CopyIcon";
 import quoteLeftImg from "../assets/icons/quote-left.svg";
 import quoteRightImg from "../assets/icons/quote-right.svg";
+import { copyToClipboard } from "../helpers";
 
 function Blockquote({ author, content }) {
+  function copy() {
+    const quote = `${content} - ${author}`;
+    copyToClipboard(quote);
+  }
+
   return (
     <StyledBlockquote>
-      <IconButton type="button">
+      <IconButton type="button" handleClick={copy}>
         <CopyIcon width=".9em" aria-hidden="true" />
         <VisuallyHidden>{texts.buttons.copy}</VisuallyHidden>
       </IconButton>

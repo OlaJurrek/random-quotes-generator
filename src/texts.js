@@ -6,4 +6,7 @@ export default {
     generate: "Generate quote",
     number: "Number of quotes",
   },
+  errors: {
+    clipboard: "You have to allow clipboard permission in your browser!"
+  }
 };

@@ -1,7 +1,7 @@
 // import React from "react";
 import styled from "styled-components";
 
-const Button = ({className, type, children }) => {
+const Button = ({ children, className, handleClick, type }) => {
   let btnType;
   if (type === 'special') {
     console.log('special button');
@@ -11,7 +11,7 @@ const Button = ({className, type, children }) => {
     throw new Error('Unrecognized button type');
   }
   return (
-    <StyledButton type={btnType} className={className}>
+    <StyledButton type={btnType} className={className} onClick={handleClick}>
       {children}
     </StyledButton>
   );
