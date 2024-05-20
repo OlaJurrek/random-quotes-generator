@@ -9,6 +9,7 @@ const GlobalStyles = createGlobalStyle`
   }
   :root {
     --black: hsl(25, 75%, 9%);
+    --green: hsl(100, 59%, 32%);
     --grey: hsla(25, 76%, 10%, 11%);
     --lightOrange: hsl(26, 66%, 84%);
     --orange: hsl(25, 74%, 47%);
@@ -40,6 +41,18 @@ const GlobalStyles = createGlobalStyle`
   #root, #__next {
     isolation: isolate;
   }
+
+  @keyframes copy {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 `;
 
 export default GlobalStyles;

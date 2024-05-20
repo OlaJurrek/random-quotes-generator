@@ -1,3 +1,4 @@
+import React from "react";
 import styled, { css } from "styled-components";
 import Button from "./Button";
 import VisuallyHidden from "./VisuallyHidden";
@@ -8,15 +9,28 @@ import quoteRightImg from "../assets/icons/quote-right.svg";
 import { copyToClipboard } from "../helpers";
 
 function Blockquote({ author, content }) {
+  const [animated, setAnimated] = React.useState(false);
+  const animationDuration = 800;
+
   function copy() {
+    setAnimated(true);
     const quote = `${content} - ${author}`;
     copyToClipboard(quote);
+    setTimeout(() => {setAnimated(false)}, animationDuration * 1.5);
   }
 
   return (
     <StyledBlockquote>
       <IconButton type="button" handleClick={copy}>
-        <CopyIcon width=".9em" aria-hidden="true" />
+        <CopyIcon
+          width=".9em"
+          aria-hidden="true"
+          fill="var(--black)"
+          style={{
+            animation: animated ? `copy ${animationDuration}ms` : undefined,
+            transformOrigin: 'bottom left'
+          }}
+        />
         <VisuallyHidden>{texts.buttons.copy}</VisuallyHidden>
       </IconButton>
       <p>{content}</p>
