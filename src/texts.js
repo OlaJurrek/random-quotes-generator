@@ -5,5 +5,7 @@ export default {
     copy: "Copy quote",
     generate: "Generate quote",
     number: "Number of quotes",
-  }
+    stepUp: "Increase number",
+    stepDown: "Decrease number",
+  },
 };
