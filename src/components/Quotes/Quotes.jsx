@@ -1,9 +1,10 @@
-import styled from "styled-components";
-import Blockquote from "./Blockquote";
+import styles from "./Quotes.module.css";
+
+import Blockquote from "../Blockquote/Blockquote";
 
 function Quotes({ data }) {
   return (
-    <QoutesList>
+    <ul className={styles.quotesList}>
       {data.map((quote) => (
         <Blockquote
           key={quote._id}
@@ -11,15 +12,8 @@ function Quotes({ data }) {
           content={quote.content}
         />
       ))}
-    </QoutesList>
+    </ul>
   );
 }
-
-const QoutesList = styled.ul`
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 3rem;
-`;
 
 export default Quotes;

@@ -1,13 +1,9 @@
-import Wrapper from './components/Wrapper';
-import GlobalStyles from './GlobalStyles';
+import Wrapper from "./components/Wrapper";
+
+import "./global.css";
 
 function App() {
-  return (
-    <>
-      <Wrapper />
-      <GlobalStyles/>
-    </>
-  )
+  return <Wrapper />;
 }
 
 export default App;

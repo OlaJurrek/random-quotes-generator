@@ -1,10 +1,4 @@
-import styled from "styled-components";
-
-function FormItem({className, children }) {
-  return <StyledFormItem className={className}>{children}</StyledFormItem>
-}
-
-const StyledFormItem = styled.div`
+.button {
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -16,6 +10,4 @@ const StyledFormItem = styled.div`
   border: var(--borderWidth) solid var(--black);
   border-radius: var(--borderRadius);
   cursor: pointer;
-`;
-
-export default FormItem;
+}

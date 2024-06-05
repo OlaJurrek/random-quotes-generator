@@ -1,0 +1,68 @@
+.blockquote {
+  --size: 3rem;
+  --verticalOffset: 15%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 25px;
+  max-width: calc(450rem / 16);
+  text-align: center;
+  padding: 50px 70px 30px;
+  border: var(--borderWidth) solid var(--black);
+  border-radius: var(--borderRadius);
+}
+
+.blockquote::before {
+  position: absolute;
+  display: block;
+  content: "";
+  width: var(--size);
+  height: var(--size);
+  background-color: var(--white);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: calc(var(--size) / 2);
+  top: var(--verticalOffset);
+  left: calc(var(--size) / -2);
+  background-image: url(../../assets/icons/quote-left.svg);
+}
+
+.blockquote::after {
+  position: absolute;
+  display: block;
+  content: "";
+  width: var(--size);
+  height: var(--size);
+  background-color: var(--white);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: calc(var(--size) / 2);
+  bottom: var(--verticalOffset);
+  right: calc(var(--size) / -2);
+  background-image: url(../../assets/icons/quote-right.svg);
+}
+
+.iconButton {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 15px;
+  border: none;
+  background-color: transparent;
+}
+
+.circle {
+  width: 40px;
+  height: 40px;
+  background-color: var(--red);
+  border-radius: 50%;
+  border: 8px solid var(--orange);
+}
+
+.footer {
+  margin-top: -2px;
+  font-variation-settings: "wght" 480;
+  text-align: center;
+}

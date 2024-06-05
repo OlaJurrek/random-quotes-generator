@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Actions.module.css";
 
-import Button from "../Button.jsx";
+import Button from "../Button/Button.jsx";
 import VisuallyHidden from "../VisuallyHidden.jsx";
 
 import texts from "../../texts.js";

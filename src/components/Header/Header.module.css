@@ -1,0 +1,11 @@
+.header {
+  margin: 6rem 0 2.5rem;
+  padding: 10px 0 15px;
+}
+
+.headline {
+  font-family: "Bowlby One", sans-serif;
+  font-size: 2.5rem;
+  letter-spacing: 0.07rem;
+  text-align: center;
+}
